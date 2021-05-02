@@ -6,7 +6,7 @@ import Header from "@primer/components/lib/Header"
 import StyledOcticon from "@primer/components/lib/StyledOcticon"
 import Avatar from "@primer/components/lib/Avatar"
 import { MarkGithubIcon } from "@primer/octicons-react"
-import Endpoint from "../consts/endpoint"
+import Endpoint from "../consts/Endpoint"
 
 export default function Home(props: PageProps) {
   console.log(theme.colorSchemes.dark.colors.bg)
