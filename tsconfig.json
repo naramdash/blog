@@ -1,12 +1,13 @@
 {
   "include": ["./src/**/*"],
+  "files": ["./src/types/css.d.ts"],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "lib": ["dom", "es2017"],
     // "allowJs": true,
     // "checkJs": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
