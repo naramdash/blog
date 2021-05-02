@@ -11,6 +11,7 @@ module.exports = {
     title: "Blog of Kim Juho",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
