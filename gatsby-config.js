@@ -6,5 +6,9 @@
 
 module.exports = {
   /* Your site config here */
+  // siteMetadata: { [key: string]: any }
+  siteMetadata: {
+    title: "Blog of Kim Juho",
+  },
   plugins: [],
 }
