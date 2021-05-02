@@ -6,6 +6,7 @@ import Header from "@primer/components/lib/Header"
 import StyledOcticon from "@primer/components/lib/StyledOcticon"
 import Avatar from "@primer/components/lib/Avatar"
 import { MarkGithubIcon } from "@primer/octicons-react"
+import Endpoint from "../consts/endpoint"
 
 export default function Home(props: PageProps) {
   console.log(theme.colorSchemes.dark.colors.bg)
@@ -32,7 +33,7 @@ export default function Home(props: PageProps) {
       <button
         type="button"
         onClick={() =>
-          fetch("http://localhost:7071/api/comments").then((succ) => {
+          fetch(`${Endpoint}/api/comments`).then((succ) => {
             const json = succ.json()
             console.log(json)
           })
