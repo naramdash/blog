@@ -28,6 +28,18 @@ export default function Home(props: PageProps) {
           />
         </Header.Item>
       </Header>
+
+      <button
+        type="button"
+        onClick={() =>
+          fetch("http://localhost:7071/api/comments").then((succ) => {
+            const json = succ.json()
+            console.log(json)
+          })
+        }
+      >
+        api를 테스트 해보아요
+      </button>
     </div>
   )
 }
