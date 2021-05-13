@@ -5,13 +5,17 @@ import { Helmet } from "react-helmet"
 export default function BlogPost(props: PageProps & { data: Data }) {
   const post = props.data.markdownRemark
   return (
-    <div>
+    <article>
       <Helmet>
         <title>{post.frontmatter.title} | KimJuho's blog</title>
       </Helmet>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+      <header>
+        <h1>{post.frontmatter.title}</h1>
+      </header>
+      <main>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </main>
+    </article>
   )
 }
 

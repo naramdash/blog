@@ -12,6 +12,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-use-query-params`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +28,10 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
+        // start with "gatsby-remark-..."
+        // - gatsby-remark-images
+        // - gatsby-remark-copy-linked-files
+        // - gatsby-remark-prismjs
         plugins: [],
       },
     },

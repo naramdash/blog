@@ -16,9 +16,11 @@
     "@primer/components": "^28.0.1",
     "@primer/css": "^16.3.0",
     "@primer/octicons-react": "^11.3.0",
+    "date-fns": "^2.21.3",
     "gatsby": "^3.4.0",
     "gatsby-plugin-react-helmet": "^4.4.0",
     "gatsby-plugin-sass": "^4.4.0",
+    "gatsby-plugin-use-query-params": "^1.0.1",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-remark": "^4.1.0",
     "react": "^17.0.2",
@@ -26,7 +28,8 @@
     "react-helmet": "^6.1.0",
     "sass": "^1.32.12",
     "styled-components": "^5.2.3",
-    "typewriter-effect": "^2.17.0"
+    "typewriter-effect": "^2.17.0",
+    "use-query-params": "^1.2.2"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.1",

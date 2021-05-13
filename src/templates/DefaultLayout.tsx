@@ -1,6 +1,7 @@
 import React from "react"
 import { PageProps } from "gatsby"
 import { Helmet } from "react-helmet"
+import Header from "../components/Header"
 
 export default function DefaultLayout(props: PageProps) {
   return (
@@ -12,6 +13,7 @@ export default function DefaultLayout(props: PageProps) {
           data-dark-theme="dark_dimmed"
         />
       </Helmet>
+      <Header />
       {props.children}
     </div>
   )
