@@ -11,6 +11,7 @@ export default function DefaultLayout(props: PageProps) {
           data-color-mode="auto"
           data-light-theme="light"
           data-dark-theme="dark_dimmed"
+          data-pathname={props.location.pathname}
         />
       </Helmet>
       <Header />

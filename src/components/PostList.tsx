@@ -13,7 +13,7 @@ export default function PostList(props: PostListProps) {
       {props.posts.map((post) => (
         <li key={post.id}>
           <img />
-          <Link to={`/posts/${"hi"}`}>
+          <Link to={post.fields.slug}>
             <h3>{post.frontmatter.title}</h3>
           </Link>
           <time dateTime={post.frontmatter.date}>
@@ -33,6 +33,9 @@ interface Post {
   frontmatter: {
     title: string
     date: string
+  }
+  fields: {
+    slug: string
   }
   excerpt: string
 }
