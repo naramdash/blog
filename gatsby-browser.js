@@ -1,4 +1,5 @@
 import "./src/styles/global.scss"
+import "prismjs/themes/prism-tomorrow.css"
 
 import React from "react"
 import DefaultLayout from "./src/templates/DefaultLayout"

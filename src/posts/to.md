@@ -9,3 +9,15 @@ tags:
 ---
 
 An article about Title
+
+```haskell
+ido :: Num -> Num
+ido 1 = 1
+ido 2 = 2
+ido x = 3
+```
+
+```javascript
+const a = b
+b = 3
+```
