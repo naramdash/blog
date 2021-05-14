@@ -93,6 +93,7 @@ interface Data {
       id: string
       frontmatter: {
         title: string
+        description: string
         date: string
       }
       fields: {
@@ -113,12 +114,12 @@ export const query = graphql`
         id
         frontmatter {
           title
+          description
           date
         }
         fields {
           slug
         }
-        excerpt(pruneLength: 80)
       }
     }
   }

@@ -5,9 +5,9 @@ import OpenGraphMeta from "./OpenGraphMeta"
 import TwitterMeta from "./TwitterMeta"
 
 interface CombinedMetasProps {
-  description?: string
   url?: string
   title?: string
+  description?: string
   image?: string
   imageAlt?: string
   player?: string

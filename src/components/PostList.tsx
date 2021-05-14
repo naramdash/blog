@@ -21,7 +21,7 @@ export default function PostList(props: PostListProps) {
               locale: ko,
             })}
           </time>
-          <p>{post.excerpt}</p>
+          <p>{post.frontmatter.description}</p>
         </li>
       ))}
     </ul>
@@ -32,10 +32,10 @@ interface Post {
   id: string
   frontmatter: {
     title: string
+    description: string
     date: string
   }
   fields: {
     slug: string
   }
-  excerpt: string
 }
