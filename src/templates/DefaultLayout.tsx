@@ -7,6 +7,7 @@ export default function DefaultLayout(props: PageProps) {
   return (
     <div>
       <Helmet>
+        <html lang="ko"></html>
         <body
           data-color-mode="auto"
           data-light-theme="light"
