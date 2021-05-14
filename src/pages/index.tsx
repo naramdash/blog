@@ -5,10 +5,11 @@ import Typewriter from "typewriter-effect"
 import { ArrowRightIcon } from "@primer/octicons-react"
 import PostList from "../components/PostList"
 import { Helmet } from "react-helmet"
+// import introMainBackground from "../resources/images/intro-main-background.jpg"
 
 export default function Home(props: PageProps & { data: Data }) {
   return (
-    <div className="p-4">
+    <div>
       <Helmet>
         <title>blog.juho.kim</title>
       </Helmet>
@@ -20,8 +21,17 @@ export default function Home(props: PageProps & { data: Data }) {
 
 function Intro() {
   return (
-    <main>
-      <h1 className="mb-2">함수형 패러다임으로</h1>
+    <main
+      className="px-4 py-6"
+      style={{
+        opacity: "0.5",
+        // backgroundImage: ` url(${introMainBackground})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <h1 className="mb-2 anim-fade-in">함수형 패러다임으로</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
           onInit={(typewriter) => {
@@ -67,7 +77,7 @@ interface PostsProps {
 }
 function Posts(props: PostsProps) {
   return (
-    <section>
+    <section className="p-4">
       <Link to="/posts" className="mb-2 d-flex flex-row flex-items-center">
         <h2>포스트</h2>
         <ArrowRightIcon />
@@ -85,6 +95,9 @@ interface Data {
         title: string
         date: string
       }
+      fields: {
+        slug: string
+      }
       excerpt: string
     }[]
   }
@@ -94,12 +107,16 @@ export const query = graphql`
     allMarkdownRemark(
       limit: 3
       sort: { order: DESC, fields: frontmatter___date }
+      filter: { frontmatter: { public: { eq: true } } }
     ) {
       nodes {
         id
         frontmatter {
           title
           date
+        }
+        fields {
+          slug
         }
         excerpt(pruneLength: 80)
       }

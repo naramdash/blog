@@ -54,18 +54,27 @@ interface Data {
         title: string
         date: string
       }
+      fields: {
+        slug: string
+      }
       excerpt: string
     }[]
   }
 }
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: { frontmatter: { public: { eq: true } } }
+    ) {
       nodes {
         id
         frontmatter {
           title
           date
+        }
+        fields {
+          slug
         }
         excerpt(pruneLength: 80)
       }
