@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { Helmet } from "react-helmet"
+import CombinedMetas from "../components/metas/CombinedMeta"
 
 export default function BlogPost(props: PageProps & { data: Data }) {
   const post = props.data.markdownRemark
   return (
     <article>
       <Helmet>
+        <CombinedMetas />
         <title>{post.frontmatter.title} | KimJuho's blog</title>
       </Helmet>
       <header>
