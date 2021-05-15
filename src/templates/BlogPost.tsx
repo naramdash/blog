@@ -1,23 +1,25 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 import CombinedMetas from "../components/metas/CombinedMeta"
 
 export default function BlogPost(props: PageProps & { data: Data }) {
   const post = props.data.markdownRemark
   return (
-    <article>
+    <main>
       <Helmet>
-        <CombinedMetas />
+        <CombinedMetas
+          url={props.location.pathname}
+          title={props.data.markdownRemark.frontmatter.title}
+          description={props.data.markdownRemark.frontmatter.description}
+        />
         <title>{post.frontmatter.title} | KimJuho's blog</title>
       </Helmet>
       <header>
         <h1>{post.frontmatter.title}</h1>
       </header>
-      <main>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </main>
-    </article>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    </main>
   )
 }
 
@@ -26,6 +28,7 @@ interface Data {
     html: string
     frontmatter: {
       title: string
+      description: string
     }
   }
 }
@@ -36,6 +39,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }

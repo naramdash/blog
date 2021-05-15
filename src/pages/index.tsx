@@ -4,7 +4,7 @@ import { graphql, Link, PageProps } from "gatsby"
 import Typewriter from "typewriter-effect"
 import { ArrowRightIcon } from "@primer/octicons-react"
 import PostList from "../components/PostList"
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 // import introMainBackground from "../resources/images/intro-main-background.jpg"
 
 export default function Home(props: PageProps & { data: Data }) {

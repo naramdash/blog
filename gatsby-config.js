@@ -11,6 +11,7 @@ module.exports = {
     title: "Blog of Kim Juho",
   },
   plugins: [
+    `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-use-query-params`,
     {

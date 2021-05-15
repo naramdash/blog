@@ -10,16 +10,18 @@ interface CombinedMetasProps {
   description?: string
   image?: string
   imageAlt?: string
+  type?: string
+  locale?: string
+  twitterCardType?: string
+  twitterUsername?: string
+  twitterID?: string
+
+  // not using
   player?: string
   playerHeight?: string
   playerWidth?: string
   playerStream?: string
-  type?: string
-  locale?: string
   facebookAppId?: string
-  twitterCardType?: string
-  twitterUsername?: string
-  twitterID?: string
   iphoneAppName?: string
   iphoneAppId?: string
   iphoneAppUrl?: string

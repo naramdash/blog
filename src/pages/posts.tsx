@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import PostList from "../components/PostList"
 import { Pagination } from "@primer/components"
 import { NumberParam, useQueryParam } from "use-query-params"
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 
 const size = 10
 
