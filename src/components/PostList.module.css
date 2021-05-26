@@ -1,0 +1,21 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  border-radius: 15px;
+  background-size: cover;
+  position: relative;
+  padding: 0px !important;
+}
+
+.item .frontmatter {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}

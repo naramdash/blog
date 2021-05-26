@@ -6,10 +6,8 @@ import { TwitterID, TwitterUsername } from "../consts/Twitter"
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 
 export default function Post(props: PageProps & { data: Data }) {
-  console.log(props.data)
   const post = props.data.markdownRemark
   const primaryImage = getImage(post.frontmatter.primaryImage.source)!
-  console.log(primaryImage)
   const meta = combineMeta({
     url: props.location.href,
     title: post.frontmatter.title,

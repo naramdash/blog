@@ -1,8 +1,36 @@
-/* body[data-pathname="/"] main {
-  background-image: url(../resources/images/intro-main-background.jpg);
-} */
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../resources/images/intro-main-background.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
 
-.introMain {
-  background-image: url("../resources/images/intro-main-background.jpg");
-  color: blueviolet;
+.about {
+  min-height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../resources/images/me/dragon_rider.jpg");
+  background-position: right 0% bottom 80%;
+  background-size: cover;
+  position: relative;
+}
+
+.about .title {
+  text-decoration: underline;
+  color: var(--color-scale-red-0);
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+
+.posts {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../resources/images/intro-posts-background.jpg");
+  background-size: cover;
+}
+
+.posts .title {
+  text-decoration: underline;
+  color: var(--color-scale-purple-0);
+  /* float: right; */
 }

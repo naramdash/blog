@@ -3,7 +3,6 @@ import { PageProps, Link, graphql } from "gatsby"
 import SampleComponent from "../components/SampleComponent"
 
 export default function Home(props: PageProps & { data: Data }) {
-  console.log(props)
   return (
     <div>
       Hello world!

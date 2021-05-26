@@ -4,6 +4,7 @@ import PostList from "../components/PostList"
 import { Pagination } from "@primer/components"
 import { NumberParam, useQueryParam } from "use-query-params"
 import { Helmet } from "react-helmet-async"
+import { ImageDataLike } from "gatsby-plugin-image"
 
 const size = 10
 
@@ -51,9 +52,13 @@ interface Data {
     nodes: {
       id: string
       frontmatter: {
+        date: string
         title: string
         description: string
-        date: string
+        primaryImage: {
+          source: ImageDataLike
+          alt: string
+        }
       }
       fields: {
         slug: string
@@ -70,9 +75,17 @@ export const query = graphql`
       nodes {
         id
         frontmatter {
+          date
           title
           description
-          date
+          primaryImage {
+            source {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            alt
+          }
         }
         fields {
           slug

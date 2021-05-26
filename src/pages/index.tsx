@@ -6,6 +6,7 @@ import PostList from "../components/PostList"
 import { Helmet } from "react-helmet-async"
 import clsx from "clsx"
 import * as styles from "./index.module.css"
+import { ImageDataLike } from "gatsby-plugin-image"
 
 export default function Home(props: PageProps & { data: Data }) {
   return (
@@ -14,34 +15,39 @@ export default function Home(props: PageProps & { data: Data }) {
         <title>blog.juho.kim</title>
       </Helmet>
       <Intro />
+      <About />
+      {/* TODO Whoami */}
+      {/* TODO pinned */}
+      {/* TODO portfolio */}
       <Posts posts={props.data.allMarkdownRemark.nodes} />
     </div>
   )
 }
 
 function Intro() {
-  console.log(styles)
   return (
-    <main className={clsx("px-4", "py-6", styles.introMain)}>
-      <h1 className="mb-2 anim-fade-in">함수형 패러다임으로</h1>
+    <main className={clsx("px-4", "py-6", styles.main)}>
+      <h1 className="mb-2 anim-fade-in">Pits of Success</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
           onInit={(typewriter) => {
-            const typeDelay = 50
+            const typeDelay = 70
             const initPause = 800
-            const phrasePause = 1000
-            const lastPhraseTypeDelay = 80
+            const phrasePause = 1100
+            const lastPhraseTypeDelay = 300
+            const lastPhrasePause = 500
 
             const wrap = (phrase: string, noBreak?: boolean) =>
-              `- ${phrase}${noBreak ? "" : "<br/>"}`
+              `✔ ${phrase}${noBreak ? "" : "<br/>"}`
 
             const phrases = [
-              "주어진 문제 해결에 집중하기",
+              "핵심 문제에 집중하기",
               "쉽게 읽을 수 있는 코드 작성하기",
               "복잡성을 최소화하기",
-              "검증 비용을 최소화하기",
+              "엄격하면서도 쉽게 검증하기",
             ]
-            const lastPhrase = "<em>...그리고 워라밸을 지키기!</em>"
+            const lastPhrase1 = "✨...그리고 "
+            const lastPhrase2 = "<strong>워라밸을 지키기! 🎆😋🎇</strong>"
 
             const initTypewriter = typewriter
               .changeDelay(typeDelay)
@@ -55,8 +61,10 @@ function Intro() {
               )
               // typing last phrase
               .changeDelay(lastPhraseTypeDelay)
-              .typeString(wrap(lastPhrase, true))
-              .pauseFor(phrasePause)
+              .typeString(lastPhrase1)
+              .pauseFor(lastPhrasePause)
+              .changeDelay(typeDelay)
+              .typeString(lastPhrase2)
               .start()
           }}
         />
@@ -64,14 +72,32 @@ function Intro() {
     </main>
   )
 }
+
+function About() {
+  return (
+    <section className={clsx(styles.about)}>
+      <Link
+        to="/about"
+        className={clsx("p-4 d-flex flex-row flex-items-center", styles.title)}
+      >
+        <h2 className="mr-1 h1">About</h2>
+        <ArrowRightIcon />
+      </Link>
+    </section>
+  )
+}
+
 interface PostsProps {
   posts: Data["allMarkdownRemark"]["nodes"]
 }
 function Posts(props: PostsProps) {
   return (
-    <section className="p-4">
-      <Link to="/posts" className="mb-2 d-flex flex-row flex-items-center">
-        <h2>글 더보기</h2>
+    <section className={clsx("p-4", styles.posts)}>
+      <Link
+        to="/posts"
+        className={clsx("mb-4 d-flex flex-row flex-items-center", styles.title)}
+      >
+        <h2 className="mr-1 h1">Post</h2>
         <ArrowRightIcon />
       </Link>
       <PostList posts={props.posts} />
@@ -84,9 +110,13 @@ interface Data {
     nodes: {
       id: string
       frontmatter: {
+        date: string
         title: string
         description: string
-        date: string
+        primaryImage: {
+          source: ImageDataLike
+          alt: string
+        }
       }
       fields: {
         slug: string
@@ -105,9 +135,17 @@ export const query = graphql`
       nodes {
         id
         frontmatter {
+          date
           title
           description
-          date
+          primaryImage {
+            source {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            alt
+          }
         }
         fields {
           slug
