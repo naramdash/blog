@@ -1,3 +1,8 @@
 /* body[data-pathname="/"] main {
   background-image: url(../resources/images/intro-main-background.jpg);
 } */
+
+.introMain {
+  background-image: url("../resources/images/intro-main-background.jpg");
+  color: blueviolet;
+}

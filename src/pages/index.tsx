@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, Link, PageProps } from "gatsby"
-
 import Typewriter from "typewriter-effect"
 import { ArrowRightIcon } from "@primer/octicons-react"
 import PostList from "../components/PostList"
 import { Helmet } from "react-helmet-async"
-// import introMainBackground from "../resources/images/intro-main-background.jpg"
+import clsx from "clsx"
+import * as styles from "./index.module.css"
 
 export default function Home(props: PageProps & { data: Data }) {
   return (
@@ -20,17 +20,9 @@ export default function Home(props: PageProps & { data: Data }) {
 }
 
 function Intro() {
+  console.log(styles)
   return (
-    <main
-      className="px-4 py-6"
-      style={{
-        opacity: "0.5",
-        // backgroundImage: ` url(${introMainBackground})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <main className={clsx("px-4", "py-6", styles.introMain)}>
       <h1 className="mb-2 anim-fade-in">함수형 패러다임으로</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
@@ -79,7 +71,7 @@ function Posts(props: PostsProps) {
   return (
     <section className="p-4">
       <Link to="/posts" className="mb-2 d-flex flex-row flex-items-center">
-        <h2>포스트</h2>
+        <h2>글 더보기</h2>
         <ArrowRightIcon />
       </Link>
       <PostList posts={props.posts} />

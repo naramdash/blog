@@ -26,17 +26,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.onload = () => {
-                window.onhashchange = (event) => {
-                  console.log(event);
-                } ;
-              };
-            `,
-          }}
-        />
       </body>
     </html>
   )

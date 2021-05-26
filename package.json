@@ -16,6 +16,7 @@
     "@primer/components": "^28.0.1",
     "@primer/css": "^16.3.0",
     "@primer/octicons-react": "^11.3.0",
+    "clsx": "^1.1.1",
     "date-fns": "^2.21.3",
     "gatsby": "^3.4.0",
     "gatsby-plugin-image": "^1.6.0",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.5",
+    "gatsby-plugin-dts-css-modules": "^2.1.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4"
   },

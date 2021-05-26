@@ -11,6 +11,9 @@ module.exports = {
     title: "Blog of Kim Juho",
   },
   plugins: [
+    // for development
+    `gatsby-plugin-dts-css-modules`,
+    // for production
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
