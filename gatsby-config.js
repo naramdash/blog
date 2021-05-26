@@ -11,6 +11,9 @@ module.exports = {
     title: "Blog of Kim Juho",
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-use-query-params`,
@@ -30,10 +33,24 @@ module.exports = {
         gfm: true,
         // Plugins configs
         // start with "gatsby-remark-..."
-        // - gatsby-remark-images
         // - gatsby-remark-copy-linked-files
-        // - gatsby-remark-prismjs
         plugins: [
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `static-files/`,
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
           {
             // [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/)
             resolve: `gatsby-remark-prismjs`,
