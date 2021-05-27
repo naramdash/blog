@@ -1,9 +1,13 @@
 .main {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("../resources/images/intro-main-background.jpg");
+  background: linear-gradient(0.25turn, #3f87a6, #8cbe65, #f69d3c);
   background-position: center;
   background-size: cover;
   color: white;
+}
+
+.main h1 {
+  color: var(--color-scale-red-7);
+  text-shadow: 0px 0px 4px rgba(222, 222, 222, 0.4);
 }
 
 .about {

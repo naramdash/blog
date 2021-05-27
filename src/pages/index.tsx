@@ -16,7 +16,6 @@ export default function Home(props: PageProps & { data: Data }) {
       </Helmet>
       <Intro />
       <About />
-      {/* TODO Whoami */}
       {/* TODO pinned */}
       {/* TODO portfolio */}
       <Posts posts={props.data.allMarkdownRemark.nodes} />
@@ -26,8 +25,8 @@ export default function Home(props: PageProps & { data: Data }) {
 
 function Intro() {
   return (
-    <main className={clsx("px-4", "py-6", styles.main)}>
-      <h1 className="mb-2 anim-fade-in">Pits of Success</h1>
+    <main className={clsx("px-5 pt-5 pb-6", styles.main)}>
+      <h1 className="mb-2 anim-fade-in ">Pits of Success</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
           onInit={(typewriter) => {
@@ -43,11 +42,12 @@ function Intro() {
             const phrases = [
               "핵심 문제에 집중하기",
               "쉽게 읽을 수 있는 코드 작성하기",
-              "복잡성을 최소화하기",
-              "엄격하면서도 쉽게 검증하기",
+              "필요할 때에만 복잡성 증가하기",
+              "검증 비용을 최소화하기",
             ]
             const lastPhrase1 = "✨...그리고 "
-            const lastPhrase2 = "<strong>워라밸을 지키기! 🎆😋🎇</strong>"
+            const lastPhrase2 =
+              "<strong style='color: black'>워라밸을 지키기! 🎆😋🎇</strong>"
 
             const initTypewriter = typewriter
               .changeDelay(typeDelay)
