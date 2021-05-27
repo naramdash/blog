@@ -95,7 +95,10 @@ function Posts(props: PostsProps) {
     <section className={clsx("p-4", styles.posts)}>
       <Link
         to="/posts"
-        className={clsx("mb-4 d-flex flex-row flex-items-center", styles.title)}
+        className={clsx(
+          "mb-4 d-inline-flex flex-row flex-items-center",
+          styles.title,
+        )}
       >
         <h2 className="mr-1 h1">Post</h2>
         <ArrowRightIcon />
