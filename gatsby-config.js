@@ -14,9 +14,9 @@ module.exports = {
     // for development
     `gatsby-plugin-dts-css-modules`,
     // for production
-    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-use-query-params`,
