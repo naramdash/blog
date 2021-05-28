@@ -5,7 +5,6 @@ import { ko } from "date-fns/locale"
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 import * as styles from "./PostList.module.css"
 import clsx from "clsx"
-import { BorderBox } from "@primer/components"
 
 interface PostListProps {
   posts: Post[]
@@ -15,7 +14,7 @@ export default function PostList(props: PostListProps) {
   return (
     <ul className={styles.list}>
       {props.posts.map((post) => (
-        <BorderBox key={post.id} as="li" className={clsx("p-2", styles.item)}>
+        <li key={post.id} className={clsx("p-2", styles.item)}>
           <GatsbyImage
             image={getImage(post.frontmatter.primaryImage.source)!}
             alt={post.frontmatter.primaryImage.alt}
@@ -31,7 +30,7 @@ export default function PostList(props: PostListProps) {
             </time>
             <p>{post.frontmatter.description}</p>
           </div>
-        </BorderBox>
+        </li>
       ))}
     </ul>
   )

@@ -2,7 +2,14 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.list > * {
+  margin-bottom: 3em;
+}
+
+.list > *:last-child {
+  margin-bottom: unset;
 }
 
 .item {

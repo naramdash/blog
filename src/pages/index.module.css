@@ -1,18 +1,13 @@
 .main {
-  background: linear-gradient(0.25turn, #3f87a6, #8cbe65, #f69d3c);
-  background-position: center;
-  background-size: cover;
-  color: white;
 }
 
 .main h1 {
-  color: var(--color-scale-red-7);
-  text-shadow: 0px 0px 4px rgba(222, 222, 222, 0.4);
+  color: var(--color-scale-purple-3);
 }
 
 .about {
   min-height: 200px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../resources/images/me/dragon_rider.jpg");
   background-position: right 0% bottom 80%;
   background-size: cover;
@@ -21,7 +16,7 @@
 
 .about .title {
   text-decoration: underline;
-  color: var(--color-scale-red-0);
+  color: var(--color-scale-yellow-4);
   position: absolute;
   left: 0%;
   bottom: 0%;
@@ -30,8 +25,10 @@
 .posts {
 }
 
-.posts .title {
+.posts a {
+  color: var(--color-scale-green-4);
   text-decoration: underline;
-  /* color: var(--color-scale-purple-0); */
-  /* float: right; */
+}
+
+.posts .title {
 }

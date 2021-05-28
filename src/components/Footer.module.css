@@ -1,0 +1,44 @@
+/* container */
+.footer {
+}
+
+/* top child */
+.footer > * {
+  margin-bottom: 3em;
+}
+.footer > * > *:first-child {
+  margin-bottom: 1em;
+}
+.footer > *:last-child {
+  margin-bottom: unset;
+}
+
+/* list */
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  margin-bottom: 1em;
+}
+.footer ul li:last-child {
+  margin-bottom: unset;
+}
+
+/* Pages item */
+.pageItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Contacts item */
+.pageItem,
+.contactItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pageItem > *:first-child,
+.contactItem > *:first-child {
+  margin-right: 1em;
+}

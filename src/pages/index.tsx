@@ -46,8 +46,7 @@ function Intro() {
               "검증 비용을 최소화하기",
             ]
             const lastPhrase1 = "✨...그리고 "
-            const lastPhrase2 =
-              "<strong style='color: black'>워라밸을 지키기! 🎆😋🎇</strong>"
+            const lastPhrase2 = "<strong>워라밸을 지키기! 🎆😋🎇</strong>"
 
             const initTypewriter = typewriter
               .changeDelay(typeDelay)
@@ -92,7 +91,7 @@ interface PostsProps {
 }
 function Posts(props: PostsProps) {
   return (
-    <section className={clsx("p-4", styles.posts)}>
+    <section className={clsx("p-4 pb-6", styles.posts)}>
       <Link
         to="/posts"
         className={clsx(
