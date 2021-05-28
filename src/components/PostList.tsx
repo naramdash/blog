@@ -10,7 +10,7 @@ interface PostListProps {
   posts: Post[]
 }
 export default function PostList(props: PostListProps) {
-  const now = new Date()
+  const now = Date.now()
   return (
     <ul className={styles.list}>
       {props.posts.map((post) => (
