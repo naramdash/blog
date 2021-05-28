@@ -28,13 +28,10 @@
 }
 
 .posts {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../resources/images/intro-posts-background.jpg");
-  background-size: cover;
 }
 
 .posts .title {
   text-decoration: underline;
-  color: var(--color-scale-purple-0);
+  /* color: var(--color-scale-purple-0); */
   /* float: right; */
 }
