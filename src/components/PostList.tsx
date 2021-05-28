@@ -21,7 +21,7 @@ export default function PostList(props: PostListProps) {
           />
           <div className={clsx("p-3", styles.frontmatter)}>
             <Link to={post.fields.slug}>
-              <h3>{post.frontmatter.title}</h3>
+              <h3 className="pb-1">{post.frontmatter.title}</h3>
             </Link>
             <time dateTime={post.frontmatter.date}>
               {formatRelative(new Date(post.frontmatter.date), now, {

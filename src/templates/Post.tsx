@@ -23,7 +23,7 @@ export default function Post(props: PageProps & { data: Data }) {
   return (
     <main>
       <Helmet meta={meta}>
-        <title>{post.frontmatter.title} | KimJuho's blog</title>
+        <title>{post.frontmatter.title} | blog.juho.kim</title>
       </Helmet>
       <header>
         <GatsbyImage

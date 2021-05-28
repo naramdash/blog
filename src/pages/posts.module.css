@@ -1,0 +1,8 @@
+.main h1 {
+  color: var(--color-scale-green-4);
+}
+
+.main a {
+  color: var(--color-scale-green-4);
+  text-decoration: underline;
+}

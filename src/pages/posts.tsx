@@ -5,6 +5,8 @@ import { Pagination } from "@primer/components"
 import { NumberParam, useQueryParam } from "use-query-params"
 import { Helmet } from "react-helmet-async"
 import { ImageDataLike } from "gatsby-plugin-image"
+import * as styles from "./posts.module.css"
+import clsx from "clsx"
 
 const size = 10
 
@@ -32,11 +34,11 @@ export default function Posts(props: PageProps & { data: Data }) {
   }
 
   return (
-    <main className="p-4">
+    <main className={clsx("p-4", styles.main)}>
       <Helmet>
-        <title>포스트</title>
+        <title>Posts | blog.juho.kim</title>
       </Helmet>
-      <h1>포스트</h1>
+      <h1 className="h1 mb-4">Posts</h1>
       <PostList posts={pagedPosts} />
       <Pagination
         currentPage={currentPage}
