@@ -45,7 +45,9 @@ export default function Post(props: PageProps & { data: Data }) {
           <p>{post.frontmatter.description}</p>
           <LabelGroup>
             {post.frontmatter.tags.map((tag) => (
-              <Label outline>{tag}</Label>
+              <Label key={tag} outline>
+                {tag}
+              </Label>
             ))}
           </LabelGroup>
         </div>
