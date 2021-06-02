@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 export default function DefaultLayout(props: PageProps) {
   return (
     <div>
-      <Header />
+      <Header location={props.location} />
       {props.children}
       <Footer />
     </div>
