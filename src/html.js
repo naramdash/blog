@@ -3,7 +3,13 @@ import PropTypes from "prop-types"
 
 export default function HTML(props) {
   return (
-    <html lang="ko" {...props.htmlAttributes}>
+    <html
+      lang="ko"
+      data-color-mode="auto"
+      data-light-theme="light"
+      data-dark-theme="dark_dimmed"
+      {...props.htmlAttributes}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -13,12 +19,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body
-        data-color-mode="auto"
-        data-light-theme="light"
-        data-dark-theme="dark_dimmed"
-        {...props.bodyAttributes}
-      >
+      <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}

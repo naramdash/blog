@@ -1,0 +1,11 @@
+.header {
+  background-color: var(--color-header-bg);
+}
+
+.header a {
+  color: var(--color-header-logo);
+}
+
+.header *::after {
+  color: var(--color-header-logo);
+}
