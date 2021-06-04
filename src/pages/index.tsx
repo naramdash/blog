@@ -26,7 +26,10 @@ export default function Home(props: PageProps & { data: Data }) {
 
 function Intro() {
   return (
-    <main className={clsx("px-5 pt-5 pb-6 col-md-5 mx-auto", styles.main)}>
+    <main
+      className={clsx("px-5 pt-5 pb-6 mx-auto", styles.main)}
+      style={{ width: "fit-content" }}
+    >
       <h1 className="mb-2 anim-fade-in ">Pits of Success</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
