@@ -1,5 +1,4 @@
 .main {
-  background-color: var(--color-bg-secondary);
 }
 
 .main h1 {
@@ -12,15 +11,14 @@
     url("../resources/images/me/dragon_rider.jpg");
   background-position: right 0% bottom 80%;
   background-size: cover;
-  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
 .about .title {
   text-decoration: underline;
   color: var(--color-scale-yellow-4);
-  position: absolute;
-  left: 0%;
-  bottom: 0%;
+  align-self: flex-end;
 }
 
 .posts {

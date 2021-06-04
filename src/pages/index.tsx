@@ -26,7 +26,7 @@ export default function Home(props: PageProps & { data: Data }) {
 
 function Intro() {
   return (
-    <main className={clsx("px-5 pt-5 pb-6 color-bg-secondary", styles.main)}>
+    <main className={clsx("px-5 pt-5 pb-6 col-md-5 mx-auto", styles.main)}>
       <h1 className="mb-2 anim-fade-in ">Pits of Success</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
@@ -78,7 +78,10 @@ function About() {
     <section className={clsx(styles.about)}>
       <Link
         to="/about"
-        className={clsx("p-4 d-flex flex-row flex-items-center", styles.title)}
+        className={clsx(
+          "p-4 d-flex flex-row flex-items-center col-md-8 mx-md-auto",
+          styles.title,
+        )}
       >
         <h2 className="mr-1 h1">About</h2>
         <ArrowRightIcon />
@@ -92,18 +95,21 @@ interface PostsProps {
 }
 function Posts(props: PostsProps) {
   return (
-    <section className={clsx("p-4 pb-6", styles.posts)}>
+    <section className={clsx(styles.posts)}>
       <Link
         to="/posts"
         className={clsx(
-          "mb-4 d-inline-flex flex-row flex-items-center",
+          "p-4 d-flex flex-row flex-items-center col-md-8 mx-md-auto",
           styles.title,
         )}
       >
         <h2 className="mr-1 h1">Post</h2>
         <ArrowRightIcon />
       </Link>
-      <PostList posts={props.posts} />
+      <PostList
+        className={"px-4 pb-6 col-md-8 mx-md-auto"}
+        posts={props.posts}
+      />
     </section>
   )
 }

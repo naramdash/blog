@@ -7,19 +7,29 @@ import * as styles from "./PostList.module.css"
 import clsx from "clsx"
 
 interface PostListProps {
+  className?: string
   posts: Post[]
 }
 export default function PostList(props: PostListProps) {
   const now = Date.now()
   return (
-    <ul className={styles.list}>
+    <ul className={clsx(props.className, styles.list)}>
       {props.posts.map((post) => (
-        <li key={post.id} className={clsx("p-2", styles.item)}>
+        <li
+          key={post.id}
+          className={"position-relative p-0 d-md-flex flex-row"}
+        >
           <GatsbyImage
             image={getImage(post.frontmatter.primaryImage.source)!}
             alt={post.frontmatter.primaryImage.alt}
+            className="col-md-5 float-md-left"
           />
-          <div className={clsx("p-3", styles.frontmatter)}>
+          <div
+            className={clsx(
+              "p-3 position-absolute left-0 bottom-0 width-full position-md-relative",
+              styles.frontmatter,
+            )}
+          >
             <Link to={post.fields.slug}>
               <h3 className="pb-1">{post.frontmatter.title}</h3>
             </Link>
