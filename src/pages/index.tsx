@@ -7,12 +7,13 @@ import { Helmet } from "react-helmet-async"
 import clsx from "clsx"
 import * as styles from "./index.module.css"
 import { ImageDataLike } from "gatsby-plugin-image"
+import { Title } from "../consts/Site"
 
 export default function Home(props: PageProps & { data: Data }) {
   return (
     <div>
       <Helmet>
-        <title>blog.juho.kim</title>
+        <title>{Title}</title>
       </Helmet>
       <Intro />
       <About />

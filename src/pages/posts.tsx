@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async"
 import { ImageDataLike } from "gatsby-plugin-image"
 import * as styles from "./posts.module.css"
 import clsx from "clsx"
+import { Title } from "../consts/Site"
 
 const size = 10
 
@@ -36,7 +37,7 @@ export default function Posts(props: PageProps & { data: Data }) {
   return (
     <main className={clsx("p-4", styles.main)}>
       <Helmet>
-        <title>Posts | blog.juho.kim</title>
+        <title>Posts | {Title}</title>
       </Helmet>
       <h1 className="h1 mb-4">Posts</h1>
       <PostList posts={pagedPosts} />

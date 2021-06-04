@@ -9,6 +9,7 @@ import { ko } from "date-fns/locale"
 import { Label, LabelGroup } from "@primer/components"
 import * as styles from "./Post.module.css"
 import clsx from "clsx"
+import { Title } from "../consts/Site"
 
 export default function Post(props: PageProps & { data: Data }) {
   const post = props.data.markdownRemark
@@ -28,7 +29,9 @@ export default function Post(props: PageProps & { data: Data }) {
   return (
     <main className={clsx(styles.main)}>
       <Helmet meta={meta}>
-        <title>{post.frontmatter.title} | blog.juho.kim</title>
+        <title>
+          {post.frontmatter.title} | {Title}
+        </title>
       </Helmet>
       <header>
         <GatsbyImage

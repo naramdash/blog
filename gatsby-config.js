@@ -7,9 +7,8 @@
 module.exports = {
   /* Your site config here */
   // siteMetadata: { [key: string]: any }
-  siteMetadata: {
-    title: "Blog of Kim Juho",
-  },
+
+  // gatsby plugins
   plugins: [
     // for development
     `gatsby-plugin-dts-css-modules`,

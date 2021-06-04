@@ -1,3 +1,5 @@
+import { Title } from "./Site"
+
 export interface Page {
   name: string
   subPath: string
@@ -35,7 +37,7 @@ const Diet: Page = {
 }
 
 export const Home: Page = {
-  name: "blog.juho.kim",
+  name: Title,
   subPath: "",
   subPages: [About, Portfolio, Pinned, Posts, Diet],
 }
