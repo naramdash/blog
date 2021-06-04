@@ -22,7 +22,7 @@ export default function PostList(props: PostListProps) {
           <GatsbyImage
             image={getImage(post.frontmatter.primaryImage.source)!}
             alt={post.frontmatter.primaryImage.alt}
-            className="col-md-5 float-md-left"
+            className="col-md-5 col-lg-3 col-xl-2 float-md-left"
           />
           <div
             className={clsx(

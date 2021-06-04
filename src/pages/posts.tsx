@@ -35,7 +35,7 @@ export default function Posts(props: PageProps & { data: Data }) {
   }
 
   return (
-    <main className={clsx("p-4", styles.main)}>
+    <main className={clsx("p-4 col-xl-8 mx-auto", styles.main)}>
       <Helmet>
         <title>Posts | {Title}</title>
       </Helmet>
