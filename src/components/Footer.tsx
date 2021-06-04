@@ -21,9 +21,12 @@ const IconSize = 30
 
 export default function Footer() {
   return (
-    <footer className={clsx("px-4 pt-4 pb-6 color-bg-tertiary", styles.footer)}>
-      <Navigation />
-      <Address />
+    <footer className={clsx("px-6 pt-6 pb-6 color-bg-tertiary", styles.footer)}>
+      <div className="d-flex flex-row flex-wrap flex-justify-around">
+        <Navigation />
+        <Address />
+      </div>
+
       <Copyright />
     </footer>
   )
@@ -31,8 +34,8 @@ export default function Footer() {
 
 function Navigation() {
   return (
-    <nav>
-      <h3>Pages</h3>
+    <nav className="col-12 col-md-4 mb-6">
+      <h3 className="mb-2">Pages</h3>
       <ul>
         <li>
           <Link to="/" className={styles.pageItem}>
@@ -77,8 +80,8 @@ function Navigation() {
 
 function Address() {
   return (
-    <address>
-      <h3>Contacts</h3>
+    <address className="col-12 col-md-4 mb-6">
+      <h3 className="mb-2">Contacts</h3>
       <ul>
         <li>
           <a
@@ -151,7 +154,7 @@ function Address() {
 
 function Copyright() {
   return (
-    <div className="d-flex flex-justify-center">
+    <div className="d-flex flex-justify-center mt-md-4">
       <span>Copyright 2021. Kim Juho. All rights reserved.</span>
     </div>
   )
