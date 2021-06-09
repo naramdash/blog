@@ -8,7 +8,7 @@
   list-style: none;
 }
 .footer ul li {
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 .footer ul li:last-child {
   margin-bottom: unset;

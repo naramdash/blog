@@ -35,9 +35,9 @@ export default function Footer() {
 function Navigation() {
   return (
     <nav className="col-12 col-md-4 mb-6">
-      <h3 className="mb-2">Pages</h3>
+      <h3 className="mb-5">Pages</h3>
       <ul>
-        <li>
+        <li className="mb-3">
           <Link to="/" className={styles.pageItem}>
             <HomeFillIcon className="color-text-primary" size={IconSize} />
             <span>Home</span>
@@ -81,7 +81,7 @@ function Navigation() {
 function Address() {
   return (
     <address className="col-12 col-md-4 mb-6">
-      <h3 className="mb-2">Contacts</h3>
+      <h3 className="mb-5">Contacts</h3>
       <ul>
         <li>
           <a
