@@ -6,7 +6,7 @@
 }
 
 .about {
-  min-height: 200px;
+  min-height: 280px;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../resources/images/me/dragon_rider.jpg");
   background-position: right 0% bottom 80%;
