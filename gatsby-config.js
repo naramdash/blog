@@ -38,6 +38,18 @@ module.exports = {
         // - gatsby-remark-copy-linked-files
         plugins: [
           {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "목차",
+              tight: false,
+              ordered: true,
+              fromHeading: 2,
+              toHeading: 4,
+              className: "table-of-contents",
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+          {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               destinationDir: `static-files/`,
