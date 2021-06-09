@@ -56,7 +56,7 @@ export default function Post(props: PageProps & { data: Data }) {
         </div>
       </header>
       <div
-        className={clsx("px-3 py-6", styles.postBody)}
+        className={clsx("px-6 py-6", styles.postBody)}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </main>

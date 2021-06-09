@@ -5,12 +5,6 @@
 }
 
 /* header */
-.main header {
-}
-.main header img,
-.main header picture {
-}
-
 .main header .frontmatter {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -21,19 +15,40 @@
   color: var(--color-scale-green-4);
 }
 
-/* post image */
+/* Below for Post styling */
 
-.main .postBody img[src$=".gif"],
+/* header */
+.postBody h1,
+.postBody h2,
+.postBody h3,
+.postBody h4,
+.postBody h5,
+.postBody h6 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* image */
+.postBody img[src$=".gif"],
 :global(.gatsby-resp-image-figure) {
   display: block;
   max-width: 80vw;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.main .postBody img[src$=".gif"]::after {
+.postBody img[src$=".gif"]::after {
   content: attr(alt);
 }
 
-.main .postBody pre {
+/* code */
+.postBody pre {
   font-family: "Nanum Gothic Coding", "monospace";
+}
+
+/* list */
+.postBody ul,
+.postBody ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
 }
