@@ -47,10 +47,22 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
+              // [API Docs](https://www.gatsbyjs.com/plugins/gatsby-remark-images/?=remark)
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
+              maxWidth: 10000, // default 650
+              linkImagesToOriginal: false, // default true
+              showCaptions: true, // default false
+              markdownCaptions: true, // default false
+              wrapperStyle: "margin: 0;",
+              backgroundColor: "none", // default white
+              withWebp: { quality: 80 }, // default false
+              // withAvif: { quality: 80 }, // default false, but not working
+              // tracedSVG: false, // default false
+              loading: "lazy", // default lazy
+              disableBgImageOnAlpha: false, // default false
+              disableBgImage: false, // default false
             },
           },
           {

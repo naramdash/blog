@@ -27,13 +27,13 @@ export default function Post(props: PageProps & { data: Data }) {
     twitterID: TwitterID,
   })
   return (
-    <main className={clsx(styles.main)}>
+    <main className={clsx("mx-auto", styles.main)}>
       <Helmet meta={meta}>
         <title>
           {post.frontmatter.title} | {Title}
         </title>
       </Helmet>
-      <header>
+      <header className="d-lg-flex flex-lg-row">
         <GatsbyImage
           image={primaryImage}
           alt={post.frontmatter.primaryImage.alt}
@@ -56,7 +56,7 @@ export default function Post(props: PageProps & { data: Data }) {
         </div>
       </header>
       <div
-        className="px-3 py-6"
+        className={clsx("px-3 py-6", styles.postBody)}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </main>
