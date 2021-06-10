@@ -5,7 +5,7 @@ date: "2021-06-10T04:47:00+09:00"
 title: "Microsoft Azure AZ900 시험"
 description: "Microsoft Azure AZ900 인증에 대한 내용 및 링크"
 primaryImage:
-  source: ./primaryimage.png
+  source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
   alt: "AZ900 시험"
 tags:
   - "Microsoft"
@@ -31,6 +31,7 @@ tags:
 ## 기타 링크
 
 - [시험 AZ-900: Microsoft Azure Fundamentals](https://docs.microsoft.com/ko-kr/learn/certifications/exams/az-900?ns-enrollment-type=Collection&ns-enrollment-id=bookmarks)
+- [Az-900 Azure Fundamentals | Week 1/6 | 애저 자격증 준비 재생목록](https://www.youtube.com/watch?v=GgKAkAWLnPw&list=PLDZRZwFT9Wktmgr4HMPFDbTAMpJ_dUOk9)
 
 덤프 문제 사이트
 - [examtopics](https://www.examtopics.com/exams/microsoft/az-900/)
