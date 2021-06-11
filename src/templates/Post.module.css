@@ -24,23 +24,27 @@
 .postBody h4,
 .postBody h5,
 .postBody h6 {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 20px;
+
+  font-size: large;
 }
 .postBody h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
   border-bottom: 4px var(--color-border-primary) solid;
+
+  font-size: x-large;
 }
 
 /* image */
-.postBody img[src$=".gif"],
+/* .postBody img */
+.postBody img,
 :global(.gatsby-resp-image-figure) {
   display: block;
   max-width: 80vw;
   margin-left: auto !important;
   margin-right: auto !important;
-}
-.postBody img[src$=".gif"]::after {
-  content: attr(alt);
 }
 
 /* code */
@@ -56,6 +60,7 @@
   margin-left: 40px;
 }
 
+/* blockquote */
 .postBody blockquote {
   background-color: var(--color-bg-tertiary);
   padding: 5px 0px 5px 10px;
@@ -63,4 +68,9 @@
 }
 .postBody blockquote p {
   margin: 0;
+}
+
+/* p */
+.postBody p {
+  font-size: 16px;
 }
