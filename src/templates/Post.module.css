@@ -27,6 +27,9 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
+.postBody h2 {
+  border-bottom: 4px var(--color-border-primary) solid;
+}
 
 /* image */
 .postBody img[src$=".gif"],
