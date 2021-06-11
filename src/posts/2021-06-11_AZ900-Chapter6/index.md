@@ -1,7 +1,7 @@
 ---
 public: true
 category: "Post"
-date: "2021-06-12T07:47:00+09:00"
+date: "2021-06-12T08:28:00+09:00"
 title: "AZ900 Chapter 6 Azure 비용 관리 및 서비스 수준 계약에 대해서 설명하기"
 description: ""
 primaryImage:
