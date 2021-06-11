@@ -17,6 +17,17 @@
 
 /* Below for Post styling */
 
+/* toc */
+:global(.table-of-contents)::before {
+  content: "목차";
+  font-size: x-large;
+  margin-left: 15px;
+}
+:global(.table-of-contents) {
+  padding: 25px 10px 20px 15px;
+  border: 1px var(--color-border-tertiary) solid;
+}
+
 /* header */
 .postBody h1,
 .postBody h2,
@@ -38,7 +49,6 @@
 }
 
 /* image */
-/* .postBody img */
 .postBody img,
 :global(.gatsby-resp-image-figure) {
   display: block;
