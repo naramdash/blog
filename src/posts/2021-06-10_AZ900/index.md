@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-06-10T04:47:00+09:00"
 title: "Microsoft Azure AZ900 시험"
-description: "Microsoft Azure AZ900 인증에 대한 내용 및 링크"
+description: "Microsoft Azure AZ900 인증에 대한 소개 및 관계된 사이트 링크"
 primaryImage:
   source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
   alt: "AZ900 시험"

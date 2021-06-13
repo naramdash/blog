@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-06-12T03:16:00+09:00"
 title: "AZ900 Chapter 4 일반적인 보안 및 네트워크 보안 기능에 관해 설명하기"
-description: ""
+description: "Azure 보안 태세 요소 / 보안 네트워크 연결 소개"
 primaryImage:
   source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
   alt: "AZ900 시험"

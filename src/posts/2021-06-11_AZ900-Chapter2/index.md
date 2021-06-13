@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-06-12T00:09:00+09:00"
 title: "AZ900 Chapter 2 핵심 Azure 서비스에 대해 설명하기"
-description: ""
+description: "Azure 컴퓨팅 / 네트워킹 / 스토리지 / 데이터베이스 소개"
 primaryImage:
   source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
   alt: "AZ900 시험"

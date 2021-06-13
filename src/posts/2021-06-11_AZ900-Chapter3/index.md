@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-06-12T01:18:00+09:00"
 title: "AZ900 Chapter 3 Azure의 핵심 솔루션 및 관리 도구에 관해 설명"
-description: ""
+description: "Azure IoT / AI / 서버리스 / 빌드 솔루션 / 환경 관리 / 모니터링 소개"
 primaryImage:
   source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
   alt: "AZ900 시험"
