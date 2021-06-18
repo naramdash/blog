@@ -5,7 +5,7 @@ date: "2021-06-14T06:00:00+09:00"
 title: "Azure fundamentals 취득 후기 및 실전 핵심 정리"
 description: "Microsoft Azure 기초 시험 AZ900에 대한 합격 과정 및 실전 압축 내용 공유"
 primaryImage:
-  source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
+  source: ../../images/AZ900-Exam.png
   alt: "AZ900 시험 "
 tags:
   - "Microsoft"

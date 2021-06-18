@@ -5,7 +5,7 @@ date: "2021-06-12T06:54:00+09:00"
 title: "AZ900 Chapter 5 ID, 거버넌스, 개인 정보 보호 및 규정 준수 기능에 대해 설명하기"
 description: "Azure ID 서비스 / 클라우드 거버넌스 전략 빌드 / 개인정보 / 규정 준수 / 데이터 보호 표준 검사 소개"
 primaryImage:
-  source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
+  source: ../../images/AZ900-Exam.png
   alt: "AZ900 시험"
 tags:
   - "Microsoft"

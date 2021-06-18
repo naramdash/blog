@@ -5,7 +5,7 @@ date: "2021-06-11T22:22:00+09:00"
 title: "AZ900 Chapter 1 핵심 Azure 개념에 관해 설명하기"
 description: "Azure 기본 사항 / 기본 개념 / 핵심 아키텍처 구성 요소 소개"
 primaryImage:
-  source: ../../resources/images/posts/primaryimages/AZ900-Exam.png
+  source: ../../images/AZ900-Exam.png
   alt: "AZ900 시험"
 tags:
   - "Microsoft"
