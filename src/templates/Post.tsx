@@ -14,10 +14,13 @@ import { Title } from "../consts/Site"
 export default function Post(props: PageProps & { data: Data }) {
   const post = props.data.markdownRemark
   const primaryImage = getImage(post.frontmatter.primaryImage.source)!
+  const descriptionForMeta = `${
+    post.frontmatter.description
+  } tags: ${post.frontmatter.tags.join(", ")}`
   const meta = combineMeta({
     url: props.location.href,
     title: post.frontmatter.title,
-    description: post.frontmatter.description,
+    description: descriptionForMeta,
     image: primaryImage.images.fallback!.src,
     imageAlt: post.frontmatter.primaryImage.alt,
     type: "website",
