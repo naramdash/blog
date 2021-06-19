@@ -17,6 +17,11 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        {/* Naver Search Advisor */}
+        <meta
+          name="naver-site-verification"
+          content="b40765fecd95730e7e87b1589ee18260fd728aca"
+        />
         {/* Google Analytics */}
         <script
           async
