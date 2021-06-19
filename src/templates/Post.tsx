@@ -33,9 +33,10 @@ export default function Post(props: PageProps & { data: Data }) {
           {post.frontmatter.title} | {Title}
         </title>
       </Helmet>
-      <header className="d-lg-flex flex-lg-row">
+      <header className="d-md-flex flex-md-row">
         <GatsbyImage
           image={primaryImage}
+          className="col-md-6"
           alt={post.frontmatter.primaryImage.alt}
         />
         <div className={clsx("p-4 pb-6", styles.frontmatter)}>
