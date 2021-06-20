@@ -75,7 +75,7 @@ tags:
 
 ### 합격 인증
 
-![Azure Fundamentals Badge](../../resources/images/certifications/azure-fundamentals-600x600.png)
+![Azure Fundamentals Badge](../../images/azure-fundamentals-600x600.png)
 
 사실 이 뱃지를 받고 싶은 욕구가 컸다.
 
