@@ -63,8 +63,20 @@
 }
 
 /* code */
-.postBody pre {
+.postBody pre,
+.postBody code {
   font-family: "Nanum Gothic Coding", "monospace";
+}
+
+.postBody pre {
+  max-width: calc(100vw - 100px);
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+}
+
+.postBody code {
+  line-break: anywhere;
 }
 
 /* list */
