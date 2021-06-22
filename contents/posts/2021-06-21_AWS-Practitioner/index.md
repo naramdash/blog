@@ -80,4 +80,4 @@ tags:
 - [CLF-C01 시험 샘플 문항](https://d1.awsstatic.com/ko_KR/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf)
 - [AWS Cloud Practitioner Essentials (Korean) 교육](https://www.aws.training/Details/eLearning?id=68459)
 - [AWS 한국어 기술 백서 목록 (2020년 업데이트)](https://aws.amazon.com/ko/blogs/korea/ko-whitepapers/)
-- [Amazon AWS Certified Cloud Practitioner Exam Actual Questions | Examtopics (더미 문제)](https://discord.com/channels/474974232032313355/812335892744241193/856535278511325215)
+- [Amazon AWS Certified Cloud Practitioner Exam Actual Questions | Examtopics (더미 문제)](https://www.examtopics.com/exams/amazon/aws-certified-cloud-practitioner/view/)
