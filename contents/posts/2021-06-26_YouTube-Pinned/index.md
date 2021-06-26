@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-06-26T23:30:00+09:00"
 title: "YouTube Pinned"
-description: "인상 깊게 본 YouTube 영상들과 리뷰"
+description: "Blazor, C# Record, Zero Trust 보안, Line 정적 페이지에 대한 인상깊은 유튜브들 정리"
 primaryImage:
   source: ../../images/YouTube-Pinned.jpg
   alt: "YouTube Pinned"

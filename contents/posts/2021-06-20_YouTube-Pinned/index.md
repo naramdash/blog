@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-06-20T01:50:00+09:00"
 title: "YouTube Pinned"
-description: "인상 깊게 본 YouTube 영상들과 리뷰"
+description: "YouTube Pinned 시리즈를 시작하는 이유. 그리고 C# Async, Azure Cosmos DB, Blazor + Tailwind, Azure Static Web Apps, Azure AD B2C, 양자 통신 등에 대한 좋은 유튜브 영상과 리뷰"
 primaryImage:
   source: ../../images/YouTube-Pinned.jpg
   alt: "YouTube Pinned"
