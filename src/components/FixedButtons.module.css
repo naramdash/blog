@@ -1,0 +1,22 @@
+.container {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  width: 2em;
+  height: 2em;
+  border-radius: 50px;
+  box-shadow: 0 0 10px var(--color-scale-gray-9);
+}
+
+.top {
+  border: 1px solid var(--color-scale-gray-0);
+  background-color: var(--color-scale-gray-5);
+  font-size: 2em;
+}
