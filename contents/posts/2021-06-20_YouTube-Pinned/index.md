@@ -5,7 +5,7 @@ date: "2021-06-20T01:50:00+09:00"
 title: "YouTube Pinned"
 description: "인상 깊게 본 YouTube 영상들과 리뷰"
 primaryImage:
-  source: ../../images/Today-Youtube.jpg
+  source: ../../images/YouTube-Pinned.jpg
   alt: "YouTube Pinned"
 tags:
   - "YouTube"
