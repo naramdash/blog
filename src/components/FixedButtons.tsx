@@ -10,9 +10,7 @@ function navigateToTop() {
 
 export default function FixedButtons() {
   const [scrollTop, setScrollTop] = useState(0)
-  const [scrollDirection, setScrollDirection] = useState<ScrollDirection>(
-    "DOWN",
-  )
+  const [scrollDirection, setScrollDirection] = useState<ScrollDirection>("UP")
 
   useEffect(() => {
     window.onscroll = function () {
