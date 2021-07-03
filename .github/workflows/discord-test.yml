@@ -22,23 +22,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          
       - name: Deploy Stage
         uses: fjogeleit/http-request-action@master
         with:
-          url: "${{ secrets.DISCORD_NARAMDASH_WEBHOOK }}"
-          method: "POST"
-          contentType: "application/json"
-          data: "{'content': 'blog.juho.kim is deployed','components': [{ 'type': 1, 'components': [ { 'type': 2, 'label': 'blog.juho.kim', 'style': 5, 'url': 'https://blog.juho.kim' }, { 'type': 2, 'label': 'GitHub Repo', 'style': 5, 'url': 'https://github.com/naramdash/blog' } ] } ] }"
+          url: '${{ secrets.DISCORD_NARAMDASH_WEBHOOK }}'
+          method: 'POST'
+          data: '{"content": "blog.juho.kim is deployed","components": [{ "type": 1, "components": [ { "type": 2, "label": "blog.juho.kim", "style": 5, "url": "https://blog.juho.kim" }, { "type": 2, "label": "GitHub Repo", "style": 5, "url": "https://github.com/naramdash/blog" } ] } ] }'
