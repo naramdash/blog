@@ -6,6 +6,16 @@ export interface Page {
   subPages: Page[]
 }
 
+// 2-depth
+
+const AzureResourceNamer: Page = {
+  name: "Azure Resource Namer",
+  subPath: "azure-resource-namer",
+  subPages: [],
+}
+
+// 1-depth
+
 const About: Page = {
   name: "About",
   subPath: "about",
@@ -15,12 +25,6 @@ const About: Page = {
 const Portfolio: Page = {
   name: "Portfolio",
   subPath: "portfolio",
-  subPages: [],
-}
-
-const Pinned: Page = {
-  name: "Pinned",
-  subPath: "pinned",
   subPages: [],
 }
 
@@ -36,8 +40,16 @@ const Diet: Page = {
   subPages: [],
 }
 
+const Tools: Page = {
+  name: "Tools",
+  subPath: "tools",
+  subPages: [AzureResourceNamer],
+}
+
+// 0-depth
+
 export const Home: Page = {
   name: Title,
   subPath: "",
-  subPages: [About, Portfolio, Pinned, Posts, Diet],
+  subPages: [About, Portfolio, Posts, Diet, Tools],
 }

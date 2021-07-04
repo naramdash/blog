@@ -3,6 +3,7 @@ import {
   HomeFillIcon,
   MailIcon,
   MarkGithubIcon,
+  PencilIcon,
   PersonIcon,
   PinIcon,
   SquirrelIcon,
@@ -24,6 +25,7 @@ export default function Footer() {
     <footer className={clsx("px-6 pt-6 pb-6 color-bg-tertiary", styles.footer)}>
       <div className="d-flex flex-row flex-wrap flex-justify-around">
         <Navigation />
+        <Tools />
         <Address />
       </div>
 
@@ -34,10 +36,10 @@ export default function Footer() {
 
 function Navigation() {
   return (
-    <nav className="col-12 col-md-4 mb-6">
+    <nav className="col-12 col-md-3 mb-6">
       <h3 className="mb-5">Pages</h3>
       <ul>
-        <li className="mb-3">
+        <li>
           <Link to="/" className={styles.pageItem}>
             <HomeFillIcon className="color-text-primary" size={IconSize} />
             <span>Home</span>
@@ -53,12 +55,6 @@ function Navigation() {
           <Link to="/portfolio" className={styles.pageItem}>
             <TerminalIcon className="color-text-primary" size={IconSize} />
             <span>Portfolio</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/pinned" className={styles.pageItem}>
-            <PinIcon className="color-text-primary" size={IconSize} />
-            <span>Pinned</span>
           </Link>
         </li>
         <li>
@@ -78,9 +74,25 @@ function Navigation() {
   )
 }
 
+function Tools() {
+  return (
+    <nav className="col-12 col-md-3 mb-6">
+      <h3 className="mb-5">Tools</h3>
+      <ul>
+        <li>
+          <Link to="/tools/azure-resource-namer" className={styles.pageItem}>
+            <PencilIcon className="color-text-primary" size={IconSize} />
+            <span>Azure Resource Namer</span>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+
 function Address() {
   return (
-    <address className="col-12 col-md-4 mb-6">
+    <address className="col-12 col-md-3 mb-6">
       <h3 className="mb-5">Contacts</h3>
       <ul>
         <li>
