@@ -1,3 +1,5 @@
+import { ButtonInvisible, Tooltip } from "@primer/components"
+import { CheckIcon, ClippyIcon } from "@primer/octicons-react"
 import { Link } from "gatsby"
 import React from "react"
 import { Asset, Assets, Groups } from "../../consts/AzureResourceNaming"
@@ -85,6 +87,15 @@ function Namer(props: NamerProps) {
   const [namerInputs, setNamerInputs] = React.useState<string[]>(
     props.asset.format.inputs.map((input) => input.fixedName ?? ""),
   )
+  const [clippyWorked, setClippyWorked] = React.useState(false)
+
+  const output = React.useMemo(
+    () =>
+      namerInputs
+        .filter((namerInput) => namerInput.length > 0)
+        .join(props.asset.format.joinWith) + (props.asset.format.suffix ?? ""),
+    [namerInputs, props],
+  )
 
   function onChangeInput(
     event: React.ChangeEvent<HTMLInputElement>,
@@ -95,6 +106,14 @@ function Namer(props: NamerProps) {
       event.target.value ?? "",
       ...prev.slice(index + 1),
     ])
+  }
+
+  function onClickClippy(name: string) {
+    navigator.clipboard.writeText(name)
+    setClippyWorked(true)
+    setTimeout(() => {
+      setClippyWorked(false)
+    }, 1500)
   }
 
   React.useEffect(() => {
@@ -132,10 +151,20 @@ function Namer(props: NamerProps) {
         <label>
           결과:
           <output>
-            {namerInputs
-              .filter((namerInput) => namerInput.length > 0)
-              .join(props.asset.format.joinWith) +
-              (props.asset.format.suffix ?? "")}
+            {output}
+            <ButtonInvisible
+              css={{}}
+              type="button"
+              onClick={() => onClickClippy(output)}
+            >
+              {clippyWorked ? (
+                <Tooltip aria-label="copied!" noDelay={true}>
+                  <CheckIcon />
+                </Tooltip>
+              ) : (
+                <ClippyIcon />
+              )}
+            </ButtonInvisible>
           </output>
         </label>
       </form>
