@@ -17,7 +17,6 @@ export default function Home(props: PageProps & { data: Data }) {
       </Helmet>
       <Intro />
       <About />
-      {/* TODO pinned */}
       {/* TODO portfolio */}
       <Posts posts={props.data.allMarkdownRemark.nodes} />
     </div>
@@ -30,7 +29,7 @@ function Intro() {
       className={clsx("px-5 pt-5 pb-6 mx-auto", styles.main)}
       style={{ width: "fit-content" }}
     >
-      <h1 className="mb-2 anim-fade-in ">Pits of Success</h1>
+      <h1 className="mb-2 anim-fade-in pr-6">Pits of Success</h1>
       <div style={{ height: "8em" }}>
         <Typewriter
           onInit={(typewriter) => {
