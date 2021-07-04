@@ -33,9 +33,28 @@ interface AssetSelectorProps {
 }
 function AssetSelector(props: AssetSelectorProps) {
   const [search, setSearch] = React.useState("")
+
+  function onSearchSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const searchedAssets = Assets.filter((asset) =>
+      asset.type.toLocaleLowerCase().includes(search.toLocaleLowerCase()),
+    )
+
+    if (searchedAssets.length > 0) {
+      if (props.selectedAsset && searchedAssets.includes(props.selectedAsset)) {
+        const index = searchedAssets.indexOf(props.selectedAsset)
+        props.selectAsset(
+          searchedAssets[index === searchedAssets.length - 1 ? 0 : index + 1],
+        )
+      } else {
+        props.selectAsset(searchedAssets[0])
+      }
+    }
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={onSearchSubmit}>
         <label>
           Resource Type Search
           <input
@@ -43,6 +62,7 @@ function AssetSelector(props: AssetSelectorProps) {
             value={search}
             onChange={(e) => setSearch(e.target.value ?? "")}
           />
+          엔터 클릭하여 순회
         </label>
         {Groups.map((group) => (
           <fieldset>
@@ -56,7 +76,7 @@ function AssetSelector(props: AssetSelectorProps) {
                     asset.type
                       .toLocaleLowerCase()
                       .includes(search.toLocaleLowerCase())
-                      ? "yellow"
+                      ? "#2786B2"
                       : undefined,
                 }}
               >
