@@ -32,6 +32,10 @@
   padding: 25px 10px 20px 15px;
   border: 1px var(--color-border-tertiary) solid;
 }
+:global(.table-of-contents) {
+  line-break: anywhere;
+  word-break: break-all;
+}
 
 /* header */
 .postBody h1,
