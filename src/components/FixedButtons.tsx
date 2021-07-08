@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import * as styles from "./FixedButtons.module.css"
 
 type ScrollDirection = "UP" | "DOWN"
@@ -9,10 +9,12 @@ function navigateToTop() {
 }
 
 export default function FixedButtons() {
-  const [scrollTop, setScrollTop] = useState(0)
-  const [scrollDirection, setScrollDirection] = useState<ScrollDirection>("UP")
+  const [scrollTop, setScrollTop] = React.useState(0)
+  const [scrollDirection, setScrollDirection] = React.useState<ScrollDirection>(
+    "UP",
+  )
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.onscroll = function () {
       setScrollTop((prev) => {
         setScrollDirection(
@@ -23,14 +25,10 @@ export default function FixedButtons() {
     }
   }, [])
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-scroll-direction={scrollDirection}>
       <button
         type="button"
-        className={clsx(
-          styles.button,
-          styles.top,
-          scrollDirection === "UP" && styles.hidden,
-        )}
+        className={clsx(styles.button, styles.top, styles.hidden)}
         onClick={navigateToTop}
       >
         🔝

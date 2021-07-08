@@ -4,8 +4,9 @@
   bottom: 30px;
 }
 
-.hidden {
-  display: none;
+.container[data-scroll-direction="UP"] .hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .button {
@@ -19,4 +20,8 @@
   border: 1px solid var(--color-scale-gray-0);
   background-color: var(--color-scale-gray-5);
   font-size: 2em;
+
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s linear;
 }
