@@ -1,4 +1,4 @@
-import { Breadcrumb } from "@primer/components"
+import { Breadcrumb, Truncate } from "@primer/components"
 import clsx from "clsx"
 import { Link } from "gatsby"
 import React from "react"
@@ -19,18 +19,16 @@ export default function Header(props: HeaderProps) {
       )}
     >
       <Breadcrumb>
-        {subPaths.map((subPath) => (
-          <Breadcrumb.Item
-            key={subPath.pathname}
-            as={Link}
-            to={subPath.pathname}
-          >
-            <span
-              className="h4"
-              style={{ fontFamily: "'Nanum Gothic Coding', monospace" }}
+        {subPaths.map((subPath, index) => (
+          <Breadcrumb.Item key={index} as={Link} to={subPath.pathname}>
+            <Truncate
+              className={clsx("h4 truncate", styles.breadcrumbItem)}
+              inline
+              maxWidth={260}
+              title={subPath.name}
             >
               {subPath.name}
-            </span>
+            </Truncate>
           </Breadcrumb.Item>
         ))}
         <Breadcrumb.Item as="span"></Breadcrumb.Item>

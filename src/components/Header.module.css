@@ -9,3 +9,7 @@
 .header *::after {
   color: var(--color-header-logo);
 }
+
+.breadcrumbItem {
+  font-family: "Nanum Gothic Coding", monospace;
+}
