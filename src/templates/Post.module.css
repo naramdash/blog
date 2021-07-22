@@ -30,6 +30,7 @@
 }
 :global(.table-of-contents) {
   padding: 25px 10px 20px 15px;
+  margin-bottom: 2rem;
   border: 1px var(--color-border-tertiary) solid;
 }
 :global(.table-of-contents) {
