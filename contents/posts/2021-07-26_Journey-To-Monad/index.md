@@ -195,6 +195,11 @@ class Applicative m => Monad (m :: * -> *) where
 
 ### `>>`
 
+```haskell
+(>>) :: (Monad m) -> m a -> m b -> m b
+m >> n = m >>= \_ -> n
+```
+
 두 개의 모나드 값을 받아, 첫번째 모나드 값의 컨텍스트에 따라 두번째 모나드 값 혹은 실패 컨텍스트를 반환한다.
 
 ### do 표기법
