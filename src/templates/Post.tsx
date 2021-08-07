@@ -52,7 +52,7 @@ export default function Post(props: PageProps & { data: Data }) {
           <p>{post.frontmatter.description}</p>
           <LabelGroup>
             {post.frontmatter.tags.map((tag) => (
-              <Label key={tag} outline>
+              <Label key={tag} sx={{ m: 1 }} outline>
                 {tag}
               </Label>
             ))}
@@ -84,7 +84,7 @@ interface Data {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
