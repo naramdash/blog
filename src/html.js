@@ -17,12 +17,13 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {/* Naver Search Advisor */}
+        {/* Naver Search Advisor = START */}
         <meta
           name="naver-site-verification"
           content="b40765fecd95730e7e87b1589ee18260fd728aca"
         />
-        {/* Google Analytics */}
+        {/* Naver Search Advisor = END */}
+        {/* Google Analytics = START */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-F75XRPDW2K"
@@ -38,6 +39,54 @@ export default function HTML(props) {
           `,
           }}
         />
+        {/* Google Analytics = END */}
+        {/* ChannelTalk = START */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          (function() {
+            var w = window;
+            if (w.ChannelIO) {
+              return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+            }
+            var ch = function() {
+              ch.c(arguments);
+            };
+            ch.q = [];
+            ch.c = function(args) {
+              ch.q.push(args);
+            };
+            w.ChannelIO = ch;
+            function l() {
+              if (w.ChannelIOInitialized) {
+                return;
+              }
+              w.ChannelIOInitialized = true;
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+              s.charset = 'UTF-8';
+              var x = document.getElementsByTagName('script')[0];
+              x.parentNode.insertBefore(s, x);
+            }
+            if (document.readyState === 'complete') {
+              l();
+            } else if (window.attachEvent) {
+              window.attachEvent('onload', l);
+            } else {
+              window.addEventListener('DOMContentLoaded', l, false);
+              window.addEventListener('load', l, false);
+            }
+          })();
+          ChannelIO('boot', {
+            "pluginKey": "7083204f-ca8a-472f-8c7a-13a748efc269"
+          });
+        `,
+          }}
+        />
+        {/* ChannelTalk = END */}
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
