@@ -1,7 +1,7 @@
 .container {
   position: fixed;
-  right: 20px;
-  bottom: 30px;
+  right: 26px;
+  bottom: 100px;
 }
 
 .container[data-scroll-direction="UP"] .hidden {
