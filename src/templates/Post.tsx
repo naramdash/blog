@@ -10,6 +10,7 @@ import { Label, LabelGroup } from "@primer/components"
 import * as styles from "./Post.module.css"
 import clsx from "clsx"
 import { Title } from "../consts/Site"
+import Comment from "../components/Comment"
 
 export default function Post(props: PageProps & { data: Data }) {
   const post = props.data.markdownRemark
@@ -63,6 +64,7 @@ export default function Post(props: PageProps & { data: Data }) {
         className={clsx("px-6 py-6", styles.postBody)}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+      <Comment />
     </main>
   )
 }
