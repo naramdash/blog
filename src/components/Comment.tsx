@@ -3,7 +3,7 @@ import { DefaultRepo } from "../consts/Comment"
 
 export default function Comment() {
   const containerRef = React.useRef<HTMLDivElement>(null)
-  const isUserThemeDark = window.matchMedia(
+  const isUserThemeDark = globalThis.matchMedia(
     "(prefers-color-scheme: dark)",
   ).matches
 
