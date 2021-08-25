@@ -3,9 +3,9 @@ import { DefaultRepo } from "../consts/Comment"
 
 export default function Comment() {
   const containerRef = React.useRef<HTMLDivElement>(null)
-  const isUserThemeDark = globalThis.matchMedia(
-    "(prefers-color-scheme: dark)",
-  ).matches
+  const isUserThemeDark =
+    globalThis?.matchMedia &&
+    globalThis.matchMedia("(prefers-color-scheme: dark)").matches
 
   React.useEffect(() => {
     const utterances = document.createElement("script")
