@@ -32,7 +32,7 @@ F#은 원래부터 관심이 있었던 언어였으며, 꼭 배워야겠다고 �
 
 ## Get Programming with F#
 
-![책 표지](https://images.manning.com/book/2/6ccdc18-2956-4d1b-8773-8f4d3bbf09c9/Abraham-Fsharp_FC_hires.png)
+<img src="https://images.manning.com/book/2/6ccdc18-2956-4d1b-8773-8f4d3bbf09c9/Abraham-Fsharp_FC_hires.png" alt="책 표지" style="width: 50vw; max-width: 800px" />
 
 [Get Programming With F#](https://book.naver.com/bookdb/book_detail.nhn?bid=7436299)
 
