@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link, PageProps } from "gatsby"
-import Typewriter from "typewriter-effect"
+// import Typewriter from "typewriter-effect"
 import { ArrowRightIcon } from "@primer/octicons-react"
 import PostList from "../components/PostList"
 import { Helmet } from "react-helmet-async"
@@ -31,7 +31,7 @@ function Intro() {
     >
       <h1 className="mb-2 anim-fade-in pr-6">Pits of Success</h1>
       <div style={{ height: "8em" }}>
-        <Typewriter
+        {/* <Typewriter
           onInit={(typewriter) => {
             const typeDelay = 70
             const initPause = 800
@@ -69,7 +69,7 @@ function Intro() {
               .typeString(lastPhrase2)
               .start()
           }}
-        />
+        /> */}
       </div>
     </main>
   )
