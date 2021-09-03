@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Link, PageProps } from "gatsby"
-// import Typewriter from "typewriter-effect"
 import { ArrowRightIcon } from "@primer/octicons-react"
 import PostList from "../components/PostList"
 import { Helmet } from "react-helmet-async"
@@ -8,6 +7,7 @@ import clsx from "clsx"
 import * as styles from "./index.module.css"
 import { ImageDataLike } from "gatsby-plugin-image"
 import { Title } from "../consts/Site"
+import CodeOfConduct from "../components/CodeOfConduct"
 
 export default function Home(props: PageProps & { data: Data }) {
   return (
@@ -25,52 +25,9 @@ export default function Home(props: PageProps & { data: Data }) {
 
 function Intro() {
   return (
-    <main
-      className={clsx("px-5 pt-5 pb-6 mx-auto", styles.main)}
-      style={{ width: "fit-content" }}
-    >
+    <main className={clsx("px-5 pt-5 pb-6 mx-auto", styles.main)}>
       <h1 className="mb-2 anim-fade-in pr-6">Pits of Success</h1>
-      <div style={{ height: "8em" }}>
-        {/* <Typewriter
-          onInit={(typewriter) => {
-            const typeDelay = 70
-            const initPause = 800
-            const phrasePause = 1100
-            const lastPhraseTypeDelay = 300
-            const lastPhrasePause = 500
-
-            const wrap = (phrase: string, noBreak?: boolean) =>
-              `✔ ${phrase}${noBreak ? "" : "<br/>"}`
-
-            const phrases = [
-              "핵심 문제에 집중하기",
-              "쉽게 읽을 수 있는 코드 작성하기",
-              "필요할 때에만 복잡성 증가하기",
-              "검증 비용을 최소화하기",
-            ]
-            const lastPhrase1 = "✨...그리고 "
-            const lastPhrase2 = "<strong>워라밸을 지키기! 🎆😋🎇</strong>"
-
-            const initTypewriter = typewriter
-              .changeDelay(typeDelay)
-              .pauseFor(initPause)
-            // typing phrases
-            phrases
-              .reduce(
-                (typewriter, phrase) =>
-                  typewriter.typeString(wrap(phrase)).pauseFor(phrasePause),
-                initTypewriter,
-              )
-              // typing last phrase
-              .changeDelay(lastPhraseTypeDelay)
-              .typeString(lastPhrase1)
-              .pauseFor(lastPhrasePause)
-              .changeDelay(typeDelay)
-              .typeString(lastPhrase2)
-              .start()
-          }}
-        /> */}
-      </div>
+      <CodeOfConduct />
     </main>
   )
 }

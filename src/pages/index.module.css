@@ -1,4 +1,6 @@
 .main {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .main h1 {
