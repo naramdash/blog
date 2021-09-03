@@ -62,6 +62,7 @@
 .postBody img,
 :global(.gatsby-resp-image-figure) {
   display: block;
+  width: 100%;
   max-width: 80vw;
   margin-left: auto !important;
   margin-right: auto !important;
