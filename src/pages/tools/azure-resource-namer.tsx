@@ -1,5 +1,5 @@
 import { ButtonInvisible, Tooltip } from "@primer/components"
-import { CheckIcon, ClippyIcon } from "@primer/octicons-react"
+import { CheckIcon, CopyIcon } from "@primer/octicons-react"
 import { Link } from "gatsby"
 import React from "react"
 import { Asset, Assets, Groups } from "../../consts/AzureResourceNaming"
@@ -182,7 +182,7 @@ function Namer(props: NamerProps) {
                   <CheckIcon />
                 </Tooltip>
               ) : (
-                <ClippyIcon />
+                <CopyIcon />
               )}
             </ButtonInvisible>
           </output>
