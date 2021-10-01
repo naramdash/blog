@@ -3,7 +3,7 @@ public: true
 category: "Post"
 date: "2021-10-01T23:55:00+09:00"
 title: "가상머신 생성은 Vagrant로!"
-description: ""
+description: "귀찮고 복잡하고 시간 오래 걸리는 VM 세팅은 가라! 간단하고 쉬운 설정으로 프로젝트 의존성 문제 해결! 더이상 내컴에서는 되던데는 없다!"
 primaryImage:
   source: ../../images/Book-Review.jpg
   alt: "review"
