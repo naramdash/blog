@@ -15,8 +15,6 @@ tags:
   - "Haskell"
 ---
 
-최근 입사하고 난 후 C# 코드 컨벤션으로 패턴매칭을 제안했던 나는 패턴매칭에 대한 세미나를 업무로 받게되었다. 이번 포스트는 그 발표 내용을 간결하고 쉽게 다듬은 것이다.
-
 대부분의 내용은 `docs.microsoft.com`을 참조하였다.
 
 [Patterns (C# reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns)
