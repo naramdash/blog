@@ -769,7 +769,7 @@ let (|HSB|) (col : System.Drawing.Color) =
    ( col.GetHue(), col.GetSaturation(), col.GetBrightness() )
 
 let printRGB (col: System.Drawing.Color) =x
-   match col withz
+   match col with
    | RGB(r, g, b) -> printfn " Red: %d Green: %d Blue: %d" r g b
 
 let printHSB (col: System.Drawing.Color) =
