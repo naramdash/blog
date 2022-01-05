@@ -63,12 +63,6 @@ function Navigation() {
             <span>Posts</span>
           </Link>
         </li>
-        <li>
-          <Link to="/diet" className={styles.pageItem}>
-            <SquirrelIcon className="color-text-primary" size={IconSize} />
-            <span>Diet</span>
-          </Link>
-        </li>
       </ul>
     </nav>
   )
